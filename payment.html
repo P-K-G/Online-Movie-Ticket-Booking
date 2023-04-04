@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="logincss2.css">
+    <link rel="stylesheet" href="gifstyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"> </script>
+</head>
+<body><form action="getTicket.html">
+    <div class="login" id="blur">
+        <center><h5 style="color:blue; font-size:40px;">PAYMENT GATEWAY</h3></center>
+        <input type="text" name="username" placeholder="Card no." value=""required/><br>
+        <input type="text" name="username" placeholder="Card Holder Name" value=""required/><br>
+		<input type="date" name="username" placeholder="Valid Till(MM/YY)" value=""required/><br>
+        <input type="password" name="passwordbox" placeholder="CVV" value=""required/><br>
+        <!-- <input type="submit" id="log-in" onclick="getinfo()" name="submit"> -->
+        <button id="log-in" onclick="toggle()" style="background-color:red; text-align:center;" >pay</button>
+    </div></form>
+    <div id="popup">
+        <h1>Payment Done</h1>
+        <img src="done.gif" >
+        <a href="getTicket.php" onclick="toggle()">GET TICKET</a>
+    </div>
+    <script type="text/javascript">
+    function toggle(){
+        var blur =document.getElementById('blur');
+        blur.classList.toggle('active');
+        var popup =document.getElementById('popup');
+        popup.classList.toggle('active');
+    }
+    </script>
+    </body>
+    </html>

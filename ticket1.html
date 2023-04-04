@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets</title>
+    <link rel="stylesheet" href="logincss2.css">
+   
+</head>
+<body>
+   
+    <p id="demo"></p>
+    <form class="login"  action="payment1.html" method="" style="background-color:#DCDCDC;">
+        <center><h5 style="color:blue; font-size:40px;">Thank You</h5></center>
+        <br>
+
+        <p id="text">
+            <script>
+                let a=localStorage.getItem("selectedSeats");
+                var old= JSON.parse(localStorage.getItem('selectedSeats'));
+                
+                var i;
+                var l=old.length;
+
+                 var ticketprice =localStorage.getItem("priceofticket");
+                // const movieSelect = document.getElementById('movie');
+                // let ticketPrice = parseInt(movieSelect.value);
+                for(i=0; i<l; i++)
+                {    
+                    document.write("<strong>"+"you have booked seat no. "+"</strong>");
+                    document.write("\n")
+                    document.write("<strong>"+old[i]+"</strong>");
+                    document.write("<br/>");
+                }
+                document.write("<br/>");
+          
+               document.write("<h2>"+"You Have selected"+"\n"+l+"\n"+"seats for a price of RS"+"\n"+l*ticketprice+"</h2>");      
+              
+            </script>
+        </p>
+        <input type="submit"  name="submit" value="Proceed for payment" style="background:red;">
+    </div>
+    
+    
+    </script>
+    </form>
+    
+</body>
+</html>

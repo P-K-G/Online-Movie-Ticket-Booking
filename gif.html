@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"> </script>
+<script>
+    let valuestart = moment.duration("20:00", "HH:mm");
+let valuestop = moment.duration("23:15", "HH:mm");
+let difference = valuestop.subtract(valuestart);
+
+console.log(difference.hours() + ":" + difference.minutes())
+
+
+</script>
+<body>
+    <input type="password">
+    <input type="time" name="starttime" value="20:00"id="starttime">
+<input type="time" name="endtime" value="23:15" id="endtime">
+<input type="time" name="duration" id="duration" disabled>
+<p id="para"></p>
+</body>
+</html>
